@@ -8,7 +8,7 @@ namespace learn_C__console.app_
 {
     class Program
     {
-
+        /*MY CALCULATOR METHOD FOR EACH MATH CALCULATION*/
         static int MathStuff(int num1 , int num2, string operate)
         {
             int answer = 0;
@@ -46,6 +46,8 @@ namespace learn_C__console.app_
 
         static void Main(string[] args)
         {
+
+            /*PRACTICE WITH ARRAYS*/
             string[] names = new string[7];
             names[0] = "Karl";
             names[1] = "Stan";
@@ -54,7 +56,7 @@ namespace learn_C__console.app_
             names[4] = "Sam";
             names[5] = "Hector";
             names[6] = "Luther";
-
+            /*PRACTICE WITH FOR EACH*/
             foreach(string name in names)
             {
                 Console.WriteLine(name);
@@ -65,7 +67,9 @@ namespace learn_C__console.app_
             Console.WriteLine("The length of this array is " + names.Length);
 
             Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
+            /*PRACTICE CHANGING VALUES IN ARRAY*/
             names[6] = "Marty";
+            /*PRACTICE WITH FOR LOOP*/
             for(int i = 0; i < names.Length; i++)
             {
                 Console.WriteLine("["+(i + 1)+"]" + " " + names[i]);
@@ -73,9 +77,11 @@ namespace learn_C__console.app_
             }
 
             Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
-
+            /*SMALL PRACTICE WITH OOP*/
             Person bill = new Person("Bill");
             bill.getName();
+
+            /*MAKING THE CALCULATOR APPLICATION*/
 
             /*TODO: 
              * Creating a simple calculator app 
@@ -84,11 +90,6 @@ namespace learn_C__console.app_
              *  2. choose which operator they want to use
              */
             Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
-
-            /*Console.WriteLine("Would you like to calculate some numbers? [Y/N]");
-            string answer1 = Console.ReadLine();
-            if(answer1.ToLower() == "y")*/
-
 
             while (true)
             {
