@@ -9,6 +9,38 @@ namespace learn_C__console.app_
     class Program
     {
 
+        static int MathStuff(int num1 , int num2, string operate)
+        {
+            int answer = 0;
+            if (operate == "+")
+            {
+                /*Console.WriteLine("adding is here");*/
+                 answer = num1 + num2;
+
+            } else if (operate == "-")
+            {
+                /*Console.WriteLine("subtracting is here");*/
+                  answer = num1 - num2;
+
+            } else if (operate == "*")
+            {
+                /*Console.WriteLine("subtracting is here");*/
+                  answer = num1 * num2;
+
+            } else if (operate == "/")
+            {
+                /*Console.WriteLine("subtracting is here");*/
+                  answer = num1 / num2;
+
+            } else
+            {
+                Console.WriteLine("Thats not an operator...");
+                
+            }
+
+            return answer;
+        }
+
        
 
 
@@ -30,10 +62,10 @@ namespace learn_C__console.app_
 
             Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
 
-            Console.WriteLine(names.Length);
+            Console.WriteLine("The length of this array is " + names.Length);
 
             Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
-            
+            names[6] = "Marty";
             for(int i = 0; i < names.Length; i++)
             {
                 Console.WriteLine("["+(i + 1)+"]" + " " + names[i]);
@@ -44,6 +76,61 @@ namespace learn_C__console.app_
 
             Person bill = new Person("Bill");
             bill.getName();
+
+            /*TODO: 
+             * Creating a simple calculator app 
+             * User should be able to: 
+             *  1. input 2 numbers
+             *  2. choose which operator they want to use
+             */
+            Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
+
+            /*Console.WriteLine("Would you like to calculate some numbers? [Y/N]");
+            string answer1 = Console.ReadLine();
+            if(answer1.ToLower() == "y")*/
+
+
+            while (true)
+            {
+                Console.WriteLine("Would you like to calculate some numbers? [Y/N]");
+                string answer1 = Console.ReadLine();
+                if (answer1.ToLower() == "n")
+                {
+                    Console.Write("Terminating Application...");
+                    break;
+                }
+                else if (answer1.ToLower() == "y")
+                {
+                    Console.WriteLine("\nGive me a numbers\n");
+                    int answer2 = Convert.ToInt32(Console.ReadLine());
+                    
+                    Console.WriteLine("\nGive me a math operator\n");
+                    string answer3 = Console.ReadLine();
+                    Console.WriteLine("\nGive me another numbers\n");
+                    int answer4 = Convert.ToInt32(Console.ReadLine());
+                   /* Console.WriteLine(answer2);
+                    Console.WriteLine(answer3);*/
+                    /*Console.WriteLine(answer2);*/
+                    Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
+                    Console.WriteLine("Answer: " + MathStuff(answer2, answer4, answer3));
+                    Console.WriteLine("```````````````````````````````````````````````````````````````````````````````````````````````````");
+                    
+
+                }
+                else
+                {
+                    Console.WriteLine("\nThat is not a correct choice...\n");
+
+                }
+
+            }
+
+
+
+
+
+
+
 
 
             Console.ReadLine();
