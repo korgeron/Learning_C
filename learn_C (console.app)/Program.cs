@@ -127,6 +127,54 @@ namespace learn_C__console.app_
             }
 
 
+            Console.WriteLine("\n```````````````````````````````````````````````````````````````````````````````````````````````````\n");
+            /*TEXT ADVENTURE GAME STARTS HERE*/
+
+            TextGame.Warrior phil = new TextGame.Warrior("Phil");
+
+            Console.WriteLine(phil.getName());
+            phil.setHealth(100);
+            Console.WriteLine(phil.getHealth());
+            TextGame.Goblin gobby = new TextGame.Goblin();
+            gobby.setHealth(50);
+
+            Console.WriteLine(gobby.getName());
+            Console.WriteLine(gobby.getHealth());
+            string input1 = null;
+
+            Console.WriteLine("Name yourself warrior!");                          
+            
+            while(input1 == null)
+            {
+                input1 = Console.ReadLine();
+                if (input1 == "")
+                {
+                    input1 = null;
+                    Console.WriteLine("No...really...freaking name yourself already...");                   
+                }
+            }
+
+            TextGame.Warrior player = new TextGame.Warrior(input1);
+                
+                Console.WriteLine("Player: " +  "\""+ player.getName() + "\"" +  " has entered the arena!");
+                
+         
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
