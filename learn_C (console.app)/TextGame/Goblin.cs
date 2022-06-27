@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace learn_C__console.app_.TextGame
 {
+/*IF YOU USED : (OTHER CLASS NAME) IT WOULD MAKE THIS CLASS INHERIT THE OTHER CLASS. NEED TO USE OVERRIDE KEYWORD ON METHODS FOR OVERRIDE*/
     class Goblin
     {
         public int health;
         public string name = "Goblin";
-
-        public Goblin()
-        {
-
-        }
 
         public int getHealth()
         {

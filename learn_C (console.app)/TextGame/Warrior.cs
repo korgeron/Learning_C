@@ -33,7 +33,8 @@ namespace learn_C__console.app_.TextGame
             this.health = health;
         }
 
-      public void Death()
+      /*KEYWORD "VIRTUAL" SETS METHOD FOR OVERRIDE*/
+      public virtual void Death()
         {
             Console.WriteLine("YOU DIED!!\nYou must beat the goblin before you can continue...");
         }
