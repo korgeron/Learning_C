@@ -11,6 +11,11 @@ namespace learn_C__console.app_.TextGame
         public int health;
         public string name = "Goblin";
 
+        public Goblin()
+        {
+
+        }
+
         public int getHealth()
         {
             return this.health;
@@ -25,6 +30,11 @@ namespace learn_C__console.app_.TextGame
         public void setHealth(int health)
         {
             this.health = health;
+        }
+
+        public void Death()
+        {
+            Console.WriteLine("YOU KILLED THE \"MIGHTY \"" + this.name + "!");
         }
 
 

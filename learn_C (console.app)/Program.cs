@@ -141,7 +141,7 @@ namespace learn_C__console.app_
             Console.WriteLine(gobby.getName());
             Console.WriteLine(gobby.getHealth());
             string input1 = null;
-
+            bool gobbyDied = false;
             Console.WriteLine("Name yourself warrior!");                          
             
             while(input1 == null)
@@ -156,12 +156,41 @@ namespace learn_C__console.app_
 
             TextGame.Warrior player = new TextGame.Warrior(input1);
                 
-                Console.WriteLine("Player: " +  "\""+ player.getName() + "\"" +  " has entered the arena!");
+                Console.WriteLine("Player: " +  "\""+ player.getName() + "\"" +  " has entered the arena! \nToday " + player.getName() + " will be facing the \"MIGHTY\" " + gobby.getName() + "!\nWould you like to fight for your life? [Y/N]");
+                string input2 = Console.ReadLine();
+            if (input2.ToLower() == "y")
+            {
+                player.setHealth(100);
+                gobby.setHealth(0);
+            } else if (input2.ToLower() == "n")
+            {
+                player.setHealth(0);
                 
-         
-            
+                
+            }
+            else
+            {
+                Console.WriteLine("You really need to listen to directions " + player.getName() + " \nNOW DIE!!\n");
+                player.setHealth(0);
+                
+            }
 
 
+            if (player.getHealth() == 0)
+            {
+                player.Death();
+            }
+
+            if (gobby.getHealth() == 0)
+            {
+                gobby.Death();
+                 gobbyDied = true;
+            }
+
+            if (gobbyDied == true)
+            {
+                Console.WriteLine("NEW CODE!!!");
+            }
 
 
 

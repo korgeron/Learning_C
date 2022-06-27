@@ -10,7 +10,7 @@ namespace learn_C__console.app_.TextGame
     {
         private int health;
         public string name;
-
+        
         /*MUST BE WITHIN CLASS REFERENCE IN ORDER TO BE USED*/
         public Warrior(string name)
         {
@@ -33,7 +33,10 @@ namespace learn_C__console.app_.TextGame
             this.health = health;
         }
 
-
+      public void Death()
+        {
+            Console.WriteLine("YOU DIED!!\nYou must beat the goblin before you can continue...");
+        }
 
 
     }    
